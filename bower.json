@@ -1,6 +1,6 @@
 {
-    "name": "monitoring",
-    "version": "0.0.0",
+    "name": "sarah",
+    "version": "0.0.1",
     "appPath": "src/main/webapp",
     "testPath": "src/test/javascript/spec",
     "dependencies": {
