@@ -16,8 +16,9 @@
 
 
 <script>
+
 function test(){
-    var days=10;
+                var days=10;
 				var dt, expires;
 				dt = new Date();
 				dt.setTime(dt.getTime()+(days*24*60*60*1000));
@@ -26,16 +27,32 @@ function test(){
 				console.log(cname)
 				var cname="toto"
 				var cvalue="QWERTY"
-				var c=cname+"="+cvalue+expires+'; domain=example.com'
+				var c=cname+"="+cvalue+expires+'; domain=crawley.com'
 				document.cookie = c
 				console.log(c);
 				console.log(document.cookie)
 				console.log("end");
-				
 				var x =  document.cookie
-				
-	
 }
+
+function test(){
+                var days=10;
+				var dt, expires;
+				dt = new Date();
+				dt.setTime(dt.getTime()+(days*24*60*60*1000));
+				expires = "; expires="+dt.toGMTString();
+				console.log("begin");
+				console.log(cname)
+				var cname="toto"
+				var cvalue="QWERTY"
+				var c=cname+"="+cvalue+expires+'; domain=.crawley.com'
+				document.cookie = c
+				console.log(c);
+				console.log(document.cookie)
+				console.log("end");
+				var x =  document.cookie
+}
+
 
  function WriteCookie() {
                if( document.myform.customer.value == "" ) {
