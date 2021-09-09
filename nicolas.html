@@ -8,10 +8,10 @@
 
 
 <form name = "myform" action = "">
-         Enter name: <input type = "text" name = "customer">name=qwerty ; domain=crawley.fr</input>
+         Enter name: <input type = "text" name = "customer" value="name=qwerty ; domain=crawley.fr" />
          <input type = "button" value = "Set Cookie" onclick = "WriteCookie();"/>
-      </form>   
 
+</form>
 
 <script>
 
@@ -34,18 +34,20 @@ function test(){
 }
 
 
+
  function WriteCookie() {
                if( document.myform.customer.value == "" ) {
                   alert("Enter some value!");
                   return;
                }
-               cookievalue = escape(document.myform.customer.value) + ";";
-               document.cookie = cookievalue;
-               document.write ("Setting Cookies : " + "name=" + cookievalue );
-			   
+
+               document.cookie = document.myform.customer.value
+
 			   var x =  document.cookie
 			   document.write ("x=: " + x );
-            }
+			   console.log("end");
+}
+
 
 </script>
 
