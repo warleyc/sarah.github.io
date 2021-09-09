@@ -6,11 +6,9 @@
 </head>
 <body class="background">
 
-<button onclick="javascript:test()">test</button>
-<input>test</input>
 
 <form name = "myform" action = "">
-         Enter name: <input type = "text" name = "customer"/>
+         Enter name: <input type = "text" name = "customer">name=qwerty ; domain=crawley.fr</input>
          <input type = "button" value = "Set Cookie" onclick = "WriteCookie();"/>
       </form>   
 
@@ -27,25 +25,7 @@ function test(){
 				console.log(cname)
 				var cname="toto"
 				var cvalue="QWERTY"
-				var c=cname+"="+cvalue+expires+'; domain=crawley.com'
-				document.cookie = c
-				console.log(c);
-				console.log(document.cookie)
-				console.log("end");
-				var x =  document.cookie
-}
-
-function test(){
-                var days=10;
-				var dt, expires;
-				dt = new Date();
-				dt.setTime(dt.getTime()+(days*24*60*60*1000));
-				expires = "; expires="+dt.toGMTString();
-				console.log("begin");
-				console.log(cname)
-				var cname="toto"
-				var cvalue="QWERTY"
-				var c=cname+"="+cvalue+expires+'; domain=.crawley.com'
+				var c=cname+"="+cvalue+expires+'; domain=crawley.fr'
 				document.cookie = c
 				console.log(c);
 				console.log(document.cookie)
@@ -60,11 +40,11 @@ function test(){
                   return;
                }
                cookievalue = escape(document.myform.customer.value) + ";";
-               document.cookie = "name=" + cookievalue;
+               document.cookie = cookievalue;
                document.write ("Setting Cookies : " + "name=" + cookievalue );
 			   
 			   var x =  document.cookie
-			    document.write ("x=: " + x );
+			   document.write ("x=: " + x );
             }
 
 </script>
